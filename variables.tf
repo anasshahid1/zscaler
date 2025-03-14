@@ -1,6 +1,6 @@
 variable "cloudname" {
   description = "Zscaler Cloud Name"
-  default = "zscalertwo.net"
+  default = "zscloud.net"
 }
 # AWS variables
 variable "aws_region1" {
@@ -101,7 +101,7 @@ variable "ccvm_instance_type" {
 variable "owner_tag" {
   description = "Custom owner tag attributes"
   type = string
-  default = "arohyans@zscaler.com"
+  default = "Anas Shahid"
 }
 
 variable "tls_key_algorithm" {
