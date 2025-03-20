@@ -55,7 +55,6 @@ variable "az_count" {
 variable "http_probe_port" {
   description = "The port Cloud Connector will listen on for Load Balancer Healthchecks"
   default = 10000
-  sensitive   = true
   validation {
           condition     = (
             var.http_probe_port == 0 ||
@@ -124,14 +123,14 @@ variable "cc_instance_size" {
   description = "Zscaler Cloud Connector instance size (Small is recommended)"
   default = "small"
   sensitive   = true
-   validation {
+  validation {
           condition     = ( 
             var.cc_instance_size == "small"  ||
             var.cc_instance_size == "medium" ||
             var.cc_instance_size == "large"
           )
           error_message = "Input cc_instance_size must be set to an approved cc instance type."
-      }
+  }
 }
 
 locals {
