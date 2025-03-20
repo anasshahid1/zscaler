@@ -74,12 +74,10 @@ variable "cc_vm_prov_url" {
 variable "secret_username" {
   description = "AWS Secrets Manager Username for Cloud Connector provisioning"
   type        = string
-  sensitive   = true
 }
 variable "secret_password" {
   description = "AWS Secrets Manager Password for Cloud Connector provisioning"
   type        = string
-  sensitive   = true
 }
 variable "secret_apikey" {
   description = "AWS Secrets Manager API Key for Cloud Connector provisioning"
