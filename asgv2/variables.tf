@@ -407,7 +407,6 @@ variable "asg_enabled" {
   type        = bool
   description = "Determines whether or not to create the cc_autoscale_lifecycle_policy IAM Policy and attach it to the CC IAM Role"
   default     = true
-  sensitive   = true
 }
 
 variable "sns_enabled" {
@@ -442,19 +441,16 @@ variable "protect_from_scale_in" {
   type        = bool
   description = "Whether newly launched instances are automatically protected from termination by Amazon EC2 Auto Scaling when scaling in. For more information about preventing instances from terminating on scale in, see Using instance scale-in protection in the Amazon EC2 Auto Scaling User Guide"
   default     = false
-  sensitive   = true
 }
 
 variable "instance_warmup" {
   type        = number
   description = "Amount of time, in seconds, until a newly launched instance can contribute to the Amazon CloudWatch metrics. This delay lets an instance finish initializing before Amazon EC2 Auto Scaling aggregates instance metrics, resulting in more reliable usage data. Set this value equal to the amount of time that it takes for resource consumption to become stable after an instance reaches the InService state"
   default     = 0
-  sensitive   = true
 }
 
 variable "asg_lambda_filename" {
   type        = string
   description = "Name of the lambda zip file without suffix"
   default     = "zscaler_cc_lambda_service"
-  sensitive   = true
 }
