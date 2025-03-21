@@ -19,13 +19,11 @@ variable "name_prefix" {
   description = "The prefix for all resources"
   default     = "zscc"
   type        = string
-  sensitive   = true
 }
 
 variable "name_suffix" {
   description = "The suffix for all your resources"
   type        = string
-  sensitive   = true
 }
 
 variable "vpc_cidr" {
